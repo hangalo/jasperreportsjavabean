@@ -14,7 +14,6 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.Serializable;
 import java.text.ParseException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import net.sf.jasperreports.engine.JRException;
@@ -43,12 +42,15 @@ public class RelatoriosBean implements Serializable {
            
             jasperPrint = JasperFillManager.fillReport(reportPath, new HashMap(), beanCollectionDataSource);
             HttpServletResponse httpServletResponse = (HttpServletResponse) FacesContext.getCurrentInstance().getExternalContext().getResponse();
-            httpServletResponse.addHeader("Content-disposition", "attachment; filename=relatorio.pdf");
+          
+            /*a linha de codigo a seguir descarrega o ficheiro em PDF*/
+            //httpServletResponse.addHeader("Content-disposition", "attachment; filename=relatorio.pdf");
 
             ServletOutputStream servletOutputStream = httpServletResponse.getOutputStream();
             JasperExportManager.exportReportToPdfStream(jasperPrint, servletOutputStream);
-
-            //JasperPrintManager.printPage(jasperPrint, 0, true);
+            
+              /*a linha de codigo a seguir manda o ficheiro para a impressora predefinida*/
+            //JasperPrintManager.printPage(jasperPrint, 0, false);
             
             servletOutputStream.flush();
             servletOutputStream.close();
