@@ -1,4 +1,4 @@
-# Criação de relatórios e sobrelatorio no Jaspert Studio usado JavaBeans como data source
+# Criação de relatórios e sob-relatórios no Jaspert Studio usado JavaBeans como data source
 
 No desenho de relatorios com o Jasper Studio, os exemplos mais comuns são apresentados com o uso de instruções SQL puras. É uma opção prática para alguns projectos .No entanto, para outros projectos, é pratico o uso dos Java Beans como datasource.
 Um Java Bean é uma classe Java que expõe os seus atributos atráves dos métodos get. Os Java Beans, também,  podem ser chamados POJO embora,  em termos conceituais sejam, entidades diferentes.
