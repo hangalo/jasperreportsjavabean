@@ -19,6 +19,19 @@ public class Factura {
     public Factura() {
     }
 
+    public Factura(Integer numero, Date data, List<ItensFactura> itensFacturas) {
+        this.numero = numero;
+        this.data = data;
+        this.itensFacturas = itensFacturas;
+    }
+    
+    public Factura(Integer numero, List<ItensFactura> itensFacturas) {
+        this.numero = numero;
+       
+        this.itensFacturas = itensFacturas;
+    }
+
+    
     public Integer getNumero() {
         return numero;
     }

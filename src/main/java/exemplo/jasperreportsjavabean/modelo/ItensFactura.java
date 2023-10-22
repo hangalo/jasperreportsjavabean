@@ -15,6 +15,13 @@ public class ItensFactura {
     public ItensFactura() {
     }
 
+    public ItensFactura(Item item, Integer quantidade) {
+        this.item = item;
+        this.quantidade = quantidade;
+    }
+    
+    
+
     public Item getItem() {
         return item;
     }
